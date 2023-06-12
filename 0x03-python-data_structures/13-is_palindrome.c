@@ -1,9 +1,6 @@
 #include "lists.h"
 #include <stddef.h>
 
-listint_t *list_reverse(listint_t **head);
-int is_palindrome(listint_t **head);
-
 /**
  * list_reverse - a function that reverses a singly-linked list
  * @head: pointer to a struct
