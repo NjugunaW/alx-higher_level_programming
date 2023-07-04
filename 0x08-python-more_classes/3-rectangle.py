@@ -3,7 +3,7 @@
 """Defines a Rectangle class."""
 
 class Rectangle:
-    """Reps a rectangle."""
+    """Represents a rectangle."""
 
     def __init__(self, width=0, height=0):
         """__init__ is called when a new object is created
