@@ -1,22 +1,35 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class."""
+"""
+
+Defines a Rectangle class.
+
+"""
 
 class Rectangle:
     """Defines a rectangle."""
 
     def __init__(self, width=0, height=0):
-        """__init__ is called when a new object is created
+        """
+
+        __init__ is called when a new object is created
 
         Args:
             width (int): Width of the new rectangle.
             height (int): Height of the new rectangle.
+        
         """
+        
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Retrieves the width of the Rectangle."""
+        """
+
+        Retrieves the width of the Rectangle.
+
+        """
+
         return self.__width
 
     @width.setter
@@ -29,7 +42,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """Retrieves the height of the Rectangle."""
+        """
+
+        Retrieves the height of the Rectangle.
+
+        """
+
         return self.__height
 
     @height.setter
@@ -41,18 +59,32 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Returns the rectangle area"""
+        """
+
+        Returns the rectangle area
+
+        """
+
         return (self.__width * self.__height)
 
     def perimeter(self):
-        """Returns the rectangle perimeter"""
+        """
+
+        Returns the rectangle perimeter
+
+        """
+
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """should print the rectangle with the character #
         """
+        
+        Should print the rectangle with the character #
+
+        """
+
         if self.__width == 0 or self.__height == 0:
             return ("")
 
@@ -64,7 +96,13 @@ class Rectangle:
         return ("".join(rect))
 
     def __repr__(self):
-        """Should return a string representation of the rectangle"""
+
+        """
+
+        Should return a string representation of the rectangle
+
+        """
+
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
         return (rect)
