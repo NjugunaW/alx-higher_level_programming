@@ -1,0 +1,137 @@
+==============================
+'0. Integers addition module'
+==============================
+'Function : add_integer()'
+==============================
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+'postive integers'
+>>> add_integer(4, 17)
+21
+
+'negative integers'
+>>> add_integer(-2, -7)
+-9
+
+'large integers'
+>>> add_integer(1000000, 70000000)
+71000000
+
+'a positive integer and a negative integer'
+>>> add_integer(-4, 5)
+1
+
+'a float and an integer'
+>>> add_integer(1.0, 3)
+4
+
+'an integer and a float'
+>>> add_integer(21, 3.0)
+24
+
+'positive floats'
+>>> add_integer(10.0, 12.0)
+22
+
+'negative floats'
+>>> add_integer(-11.0, -25.0)
+-36
+
+'a negative float and a positive integer'
+>>> add_integer(-12.0, 10)
+-2
+
+'a positive float and a negative integer'
+>>> add_integer(12.0, -10)
+2
+
+'a and b empty'
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer()missing 1 required positional argument: 'a'
+
+'only one argument'
+>>> add_integer(25)
+103
+
+'a is not defined'
+>>> add_integer(a, 84)
+ Traceback (most recent call last):
+ NameError: name 'a' is not defined
+
+'b is not defined'
+>>> add_integer(47, b)
+ Traceback (most recent call last):
+ NameError: name 'b' is not defined
+
+'a is an integer and b is a string'
+>>> add_integer(25, "Wow")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+'a is a string and b is an integer'
+>>> add_integer("Where", 19)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+'a is a bool'
+>>> add_integer(False, 6)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+'b is a bool'
+>>> add_integer(32, False)
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+'a is a tuple'
+>>> add_integer((12, 8), 95)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+'b is a tuple'
+>>> add_integer(63, (11, 9))
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+'a is a list'
+>>> add_integer([12, 8], 95)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+'b is a list'
+>>> add_integer(59, [12, 8])
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+'a is a dict'
+>>> add_integer({22, 44}, 6)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+'b is a dict'
+>>> add_integer(11, {9, 7})
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+'a is an infinity float and b is an integer'
+>>> add_integer(1111e11111, 2)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+'a is an integer and b is an infinity float'
+>>> add_integer(24, 1111e11111)
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+'a is 'None' and b is an integer'
+>>> add_integer(None, 61)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+'a is an integer and b is 'None''
+>>> add_integer(32, None)
+Traceback (most recent call last):
+TypeError: b must be an integer
+

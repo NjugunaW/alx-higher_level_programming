@@ -1,0 +1,60 @@
+====================================================
+'6. Matrix multiplication module'
+====================================================
+'Function : 100-matrix_mul(m_a, m_b)'
+====================================================
+
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+'matrix with integers'
+>>> matrix_mul ([[2, 4], [7, 1]], [[9], [67]])
+[[286], [130]]
+
+'matrix with floats'
+>>> matrix_mul ([[2.1, 4.2], [7.1, 1.4]], [[9.9], [67.3]])
+[[304.05], [164.51]]
+
+'m_a is not a list of integers or floats'
+>>> matrix_mul("Wow", [[11, 9]])
+Traceback (most recent call last):
+TypeError: m_a must be a list
+
+'m_b is not a list of integers or floats'
+>>> matrix_mul([[11, 9]], "Wow")
+Traceback (most recent call last):
+TypeError: m_b must be a list
+
+'m_a is not a list of integers or floats'
+>>> matrix_mul((1, 2, 3), [[11, 9]])
+Traceback (most recent call last):
+TypeError: m_a must be a list
+
+'m_b is not a list of integers or floats'
+>>> matrix_mul([[11, 9]], {"Wow"})
+Traceback (most recent call last):
+TypeError: m_b must be a list
+
+'m_a is empty'
+>>> matrix_mul([], [[11, 9]])
+Traceback (most recent call last):
+ValueError: m_a can't be empty
+
+'m_b is empty'
+>>> matrix_mul([[11, 9]], [])
+Traceback (most recent call last):
+ValueError: m_b can't be empty
+
+'m_a is a list of lists but not a matrix'
+>>> matrix_mul([[11, 9], [2, 1.1, -8]], [[3, 2]])
+Traceback (most recent call last):
+TypeError: each row of m_a must be of the same size
+
+'m_b is not a list of lists of integers'
+>>> matrix_mul([[7, 2.2], [-7, 8]], [[11, 12], [8, "Wow"]])
+Traceback (most recent call last):
+TypeError: m_b should contain only integers or floats
+
+'m_a and m_b can't be multiplied'
+>>> matrix_mul([[11, 9], [2, 1.1, -8]], [[3, 2]])
+Traceback (most recent call last):
+ValueError: m_a and m_b can't be multiplied

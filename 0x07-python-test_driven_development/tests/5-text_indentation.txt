@@ -1,0 +1,64 @@
+====================================================
+'4. Text indentation module'
+====================================================
+'Function : 5-text_indentation(text)'
+====================================================
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+'text is a string'
+>>> text_indentation("Making my way downtown!")
+Making my way downtown!
+<BLANKLINE>
+
+'text is string with spaces'
+>>> text_indentation("  Making money.   Spending money.  ")
+Making money.
+<BLANKLINE>
+Spending money.
+<BLANKLINE>
+
+'text with spaces and characters only'
+>>> text_indentation("  :.?   ")
+:
+<BLANKLINE>
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+
+'text is an integer'
+>>> text_indentation(7)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+'text is a float'
+>>> text_indentation(7.3)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+'text is a bool'
+>>> text_indentation(True)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+'text is a dictionary'
+>>> text_indentation({5, 7})
+Traceback (most recent call last):
+TypeError: text must be a string
+
+'text is a list'
+>>> text_indentation([5, 7])
+Traceback (most recent call last):
+TypeError: text must be a string
+
+'text is a tuple'
+>>> text_indentation((5, 7))
+Traceback (most recent call last):
+TypeError: text must be a string
+
+'text is empty'
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+

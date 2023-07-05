@@ -1,0 +1,85 @@
+====================================================
+'2. Say my name'
+====================================================
+'Function : 3-say_my_name(first_name, last_name="")'
+====================================================
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+'first_name and last_name are strings'
+>>> say_my_name("Maria", "Aquafina")
+My name is Maria Aquafina
+
+'first_name is an integer'
+>>> say_my_name(4, "Aquafina")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+'last_name is an integer'
+>>> say_my_name("Maria", 4)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+'first_name and last_name are empty'
+>>> say_my_name()
+Traceback (most recent call last):
+My name is
+
+'first_name is empty'
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+'last_name is empty'
+>>> say_my_name("Maria")
+My name is Maria
+
+'first_name is a float'
+>>> say_my_name(4.5, "Aquafina")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+'last_name is a float'
+>>> say_my_name("Maria", 4.5)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+'first_name is a bool'
+>>> say_my_name(True, "Aquafina")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+'last_name is a bool'
+>>> say_my_name("Maria", True)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+'first_name is a list'
+>>> say_my_name([4.5], "Aquafina")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+'last_name is a list'
+>>> say_my_name("Maria", [4.5])
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+'first_name is a tuple'
+>>> say_my_name((4.5), "Aquafina")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+'last_name is a tuple'
+>>> say_my_name("Maria", (4.5))
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+'first_name is a dictionary'
+>>> say_my_name({4.5}, "Aquafina")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+'last_name is a dictionary'
+>>> say_my_name("Maria", {4.5})
+Traceback (most recent call last):
+TypeError: last_name must be a string

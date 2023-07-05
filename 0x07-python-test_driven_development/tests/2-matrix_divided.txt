@@ -1,0 +1,76 @@
+=========================================
+'1. Divide a matrix module'
+=========================================
+'Function : matrix_divided(matrix, div)'
+=========================================
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+'positive integers'
+>>> matrix_divided([12, 18, 24], [30, 36, 42], [48, 54, 60,], 6)
+[[2, 3, 4], [5, 6, 7], [8, 9, 10]]
+
+'div is a negative integer'
+>>> matrix_divided([12, 18, 24], [30, 36, 42], [48, 54, 60,], -6)
+[[-2, -3, -4], [-5, -6, -7], [-8, -9, -10]]
+
+'div is a negative float'
+>>>matrix_divided([12, 18, 24], [30, 36, 42], [48, 54, 60,], -6.0)
+[[-2.0, -3.0, -4.0], [-5.0, -6.0, -7.0], [-8.0, -9.0, -10.0]]
+
+'div is a positive float'
+>>>matrix_divided([12, 18, 24], [30, 36, 42], [48, 54, 60,], 6.0)
+[[2.0, 3.0, 4.0], [5.0, 6.0, 7.0], [8.0, 9.0, 10.0]]
+
+'matrix with positive and negative floats and integers and div is a postive integer'
+>>>matrix_divided([-12.6, 18, -24.48], [-30, 36.36, 42], [48, 54.60, -60,], 6)
+[[-2.1, 3, -4.08], [-5, 6.06, 7], [8, 9.1, -10]]
+
+'matrix with positive and negative floats and integers and div is a negative integer'
+>>>matrix_divided([-12.6, 18, -24.48], [-30, 36.36, 42], [48, 54.60, -60,], -6)
+[[2.1, -3, 4.08], [5, -6.06, -7], [-8, -9.1, 10]]
+
+'matrix with positive and negative floats and integers and div is a postive float'
+>>>matrix_divided([-12.6, 18, -24.48], [-30, 36.36, 42], [48, 54.60, -60,], 6.0)
+[[-2.1, 3.0, -4.08], [-5.0, 6.06, 7.0], [8.0, 9.1, -10.0]]
+
+'matrix with positive and negative floats and integers and div is a negative float'
+>>>matrix_divided([-12.6, 18, -24.48], [-30, 36.36, 42], [48, 54.60, -60,], -6.0)
+[[2.1, -3.0, 4.08], [5.0, -6.06, -7.0], [-8.0, -9.1, 10.0]]
+
+'inconsistent size of rows in matrix'
+>>> matrix_divided([12, 18], [30, 36, 42], 6)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+'div is a string'
+>>>matrix_divided([12, 18, 24], [30, 36, 42], [48, 54, 60,], Wow)
+Traceback (most recent call last):
+TypeError: div must be a number
+
+'matrix is a string'
+>>>matrix_divided("Wow", 6)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+'div is 0'
+>>>matrix_divided([12, 18, 24], [30, 36, 42], [48, 54, 60,], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+'div is a 'None''
+>>>matrix_divided([12, 18, 24], [30, 36, 42], [48, 54, 60,], 'None')
+Traceback (most recent call last):
+TypeError: div must be a number
+
+'div is a 'Nan''
+>>>matrix_divided([12, 18, 24], [30, 36, 42], [48, 54, 60,], 'Nan')
+Traceback (most recent call last):
+TypeError: div must be a number
+
+'matrix is empty'
+>>> matrix_divided([], [], 6)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
