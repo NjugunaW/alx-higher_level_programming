@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""This function returns True if
+
+"""
+This function returns True if
 the object is an instance of a class that inherited
 """
 
