@@ -1,12 +1,17 @@
 #!/usr/bin/python3
+"""
+This module contains a class that inherits from int
+"""
 
 class MyInt(int):
     """
-    A class MyInt that inherits from int
+    This class inherits from int
     """
+
     def __eq__(self, num):
         """
-        Used to implement the equality comparison between objects of a class
+        This function is used to implement the 
+        equality comparison between objects of a class
 
         Args:
             num (int): an inputed integer
@@ -14,11 +19,13 @@ class MyInt(int):
         Returns:
             Boolean value showing the equality
         """
+
         return (int(self) != num)
 
     def __ne__(self, num):
         """
-        Used to implement inequality comparison between objects of a class
+        This function is used to implement
+        inequality comparison between objects of a class
 
         Args:
             num (int): an inputed integer
@@ -26,4 +33,5 @@ class MyInt(int):
         Returns:
             Boolean value showing the inequality
         """
+
         return (int(self) == num)
