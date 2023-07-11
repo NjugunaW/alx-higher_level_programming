@@ -1,15 +1,19 @@
 #!/usr/bin/python3
+"""
+This module contains a class Square
+"""
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """ A class Square that inherits from a Rectangle
+    """
+    This class Square inherits from a Rectangle
     """
     def __init__(self, size):
         """
-        Called when an new object is created
+        This method initializes the object's attributes when a class is create
+d
 
         Args:
             size(int): Size of the square
