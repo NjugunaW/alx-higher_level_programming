@@ -11,5 +11,7 @@ class BaseGeometry:
     def area(self):
         """
         This method computes the area
+        :return:
         """
+
         raise Exception('area() is not implemented')
