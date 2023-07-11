@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This function contains a function that returns True if the object is an instance
+This module contains a function that returns True if the object is an instance
 of  a class that inherited (directly or indirectly) from specified class;
 otherwise False
 """
@@ -9,7 +9,7 @@ otherwise False
 
 def inherits_from(obj, a_class):
     """
-    This function returns True if the object is an instance of a
+    This module returns True if the object is an instance of a
     class that inherited (directly or indirectly) from the specified class;
     otherwise False.
     :obj: The object in question
