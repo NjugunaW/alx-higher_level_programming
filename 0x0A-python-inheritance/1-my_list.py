@@ -1,15 +1,24 @@
 #!/usr/bin/python3
 
-"""A class that inherits from a list
 """
-class Mylist(list):
-    """ The class that inherits form a list
+This module contains a class that inherits the list class
+"""
+
+
+class MyList(list):
+    """
+    This class inherits from list class
     """
 
-def print_sorted(self):
-    """This prints the list in ascending order
-    """
+    def __init__(self):
+        """
+        This instantiates the objects
+        """
+        super().__init__()
 
-    list_duplicate = self[:]
-    list_duplicate.sort()
-    print(list_duplicate)
+    def print_sorted(self):
+        """
+        This method prints a list in ascending order
+        :return:
+        """
+        print(sorted(self))
