@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """
-This module has a function that returns a list of lists of
-integers representing the Pascal's triangle of n.
+This module has a function that returns a list of
+integers representing the Pascal's triangle of n
 """
 
 
 def pascal_triangle(n):
     """
-    This function returns a list of lists of 
-    integers representing the Pascal’s triangle of n
+    This function returns a list of lists of integers
+    representing the Pascal’s triangle of n
     :n:
     :return:
     """
@@ -17,10 +17,11 @@ def pascal_triangle(n):
 
     triangle = [[1]]
     while len(triangle) != n:
-        bse = triangle[-1]
+        ang = triangle[-1]
         temp = [1]
-        for x in range(len(bse) - 1):
-            temp.append(bse[x] + bse[x + 1])
+        for i in range(len(ang) - 1):
+            temp.append(ang[i] + ang[i + 1])
         temp.append(1)
         triangle.append(temp)
     return triangle
+
