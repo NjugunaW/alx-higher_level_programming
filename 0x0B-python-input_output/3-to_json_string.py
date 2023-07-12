@@ -1,13 +1,16 @@
 #!/usr/bin/python3
 
 """
-A module that returns the JSON rep of an object
+This module has a function that converts string to json
 """
+
 import json
+
 
 def to_json_string(my_obj):
     """
-    This module  returns the JSON representation of an object (string)
+    This function converts string to json
+    :my_obj:
+    :return: json
     """
-
     return json.dumps(my_obj)
