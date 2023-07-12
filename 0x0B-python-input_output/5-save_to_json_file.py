@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 """
-A module that writes an Object to a text file
-using a JSON representation
+This module has a function that writes an Object to a text file
+using a JSON Representation
 """
 
 import json
@@ -10,11 +10,10 @@ import json
 
 def save_to_json_file(my_obj, filename):
     """
-    This module writes an Object to a text file
-    using a JSON representation
+    This function writes an Object to a text file, using a JSON representation
     :my_obj:
     :filename:
     :return:
     """
-    with open(filename,mode='w', encoding='utf-8') as f_ile:
+    with open(filename, mode="w", encoding="utf-8") as f_ile:
         json.dump(my_obj, f_ile)
