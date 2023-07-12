@@ -6,11 +6,11 @@ at the end of a text file
 
 def append_write(filename="", text=""):
     """
-    This function appends a string at the end of a text file (UTF8) and
-    returns the number of characters added
+    This function appends a string at the end of a text file
     :filename:
     :text:
     :return: Number of characters added
     """
-    with open(filename, 'a', encoding='utf') as f_ile:
+
+    with open(filename, mode='a', encoding='utf') as f_ile:
         return f_ile.write(text)
