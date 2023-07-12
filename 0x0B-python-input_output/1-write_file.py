@@ -4,6 +4,7 @@ A module that writes a string to a text file (UTF8) and
 returns the number of characters written
 """
 
+
 def write_file(filename="", text=""):
     """
     This module writes a string to a text file (UTF8) and 
@@ -14,8 +15,8 @@ def write_file(filename="", text=""):
         text (flds): Text to write
 
     Returns:
-        number of chars written 
+        number of chararacters written 
     """
 
-    with open(filename, 'w', encoding='utf-8') as f:
-        return f.write(text)
+    with open(filename, mode='w', encoding='utf') as f_ile:
+        return f_ile.write(text)
