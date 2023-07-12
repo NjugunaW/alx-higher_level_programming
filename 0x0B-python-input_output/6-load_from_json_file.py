@@ -14,4 +14,4 @@ def load_from_json_file(filename):
     :return:
     """
     with open(filename, encoding="utf-8") as f_ile:
-        return json.load(f_file)
+        return json.load(f_ile)
