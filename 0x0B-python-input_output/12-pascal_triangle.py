@@ -17,10 +17,10 @@ def pascal_triangle(n):
 
     triangle = [[1]]
     while len(triangle) != n:
-        xyz = triangle[-1]
-        arbtry = [1]
-        for i in range(len(xyz) - 1):
-            arbtry.append(xyz[i] + xyz[i + 1])
-        arbtry.append(1)
-        triangle.append(arbtry)
+        bse = triangle[-1]
+        temp = [1]
+        for x in range(len(bse) - 1):
+            temp.append(bse[x] + bse[x + 1])
+        temp.append(1)
+        triangle.append(temp)
     return triangle
