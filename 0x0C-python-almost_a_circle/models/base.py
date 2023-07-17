@@ -3,6 +3,11 @@
 """
 A Class Base
 """
+import os
+import re
+from random import randint
+from json import JSONDecoder, JSONEncoder
+from turtle import Pen
 
 class Base:
     """
@@ -23,3 +28,4 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
