@@ -9,11 +9,10 @@ import urllib.request
 
 
 if __name__ == "__main__":
-    unifrom_r_l = sys.argv[1]
-    val = {"email": sys.argv[2]}
-    data = urllib.parse.urlencode(val).encode("ascii")
+    url = sys.argv[1]
+    value = {"email": sys.argv[2]}
+    data = urllib.parse.urlencode(value).encode("ascii")
 
-    request = urllib.request.Request(unofprm_r_l, data)
+    request = urllib.request.Request(url, data)
     with urllib.request.urlopen(request) as response:
         print(response.read().decode("utf-8"))
-

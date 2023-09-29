@@ -8,11 +8,11 @@ import requests
 
 
 if __name__ == "__main__":
-    uniform_r_l = "https://api.github.com/repos/{}/{}/commits".format(
+    url = "https://api.github.com/repos/{}/{}/commits".format(
         sys.argv[2], sys.argv[1])
 
-    r = requests.get(uniform_r_l)
-    commits = res.json()
+    r = requests.get(url)
+    commits = r.json()
     try:
         for i in range(10):
             print("{}: {}".format(

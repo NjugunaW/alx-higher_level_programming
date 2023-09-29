@@ -7,10 +7,10 @@ import requests
 
 
 if __name__ == "__main__":
-    uniform_r_l = sys.argv[1]
+    url = sys.argv[1]
 
-    res = requests.get(uniform_r_l)
-    if res.status_code >= 400:
-        print("Error code: {}".format(esr.status_code))
+    r = requests.get(url)
+    if r.status_code >= 400:
+        print("Error code: {}".format(r.status_code))
     else:
-        print(res.text)
+        print(r.text)
